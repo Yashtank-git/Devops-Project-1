@@ -38,6 +38,7 @@ Update the aws config directory file path to **terraform/01-AWS-DOCKER-JENKINS/v
 
 ## Running IoC Commands
 
+change directory to **terraform/01-AWS-DOCKER-JENKINS** and run below commands in shell
 
 ```bash
 terraform init
