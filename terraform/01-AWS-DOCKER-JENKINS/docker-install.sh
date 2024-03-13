@@ -16,5 +16,14 @@ sudo apt-get update -y
 
 #Install Docker
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-sudo docker ls
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose -y
+sudo docker ps
+
+#Setting the user to run docker without sudo
+
+sudo usermod -aG docker ubuntu
+sudo usermod -aG sudo ubuntu
+
+#Install Java
+sudo apt-get install openjdk-17-jre -y
+exit
