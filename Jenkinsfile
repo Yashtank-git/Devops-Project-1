@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Get some code from a GitHub repository
-                git branch: 'yashtank/dev', url: 'https://github.com/Yashtank-git/Devops-Project-1.git'
+                git branch: 'main', url: 'https://github.com/Yashtank-git/Devops-Project-1.git'
                 
                 // Run docker-compose to build the image
                 sh 'docker-compose --version'
