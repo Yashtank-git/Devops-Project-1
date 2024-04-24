@@ -1,10 +1,10 @@
-# DevOps - Project - 1
+# django-docker-jenkins-terraform-aws
 ## Project Description
-This project is to create Infrastructure in AWS as infrastructure as Code  for a todoApp application forked from shreys7/django-todo:develop. This will setup a Jenkins server as well for configuring **CI**(Continious Integration) for the Application to Build and Test.
+This project is to create Infrastructure in AWS as infrastructure as Code  for a Django todoApp application forked from shreys7/django-todo:develop. This will setup a Jenkins server as well for configuring **CI**(Continious Integration) and **CD**(Continious Deployment) for the Application to Build and Test. Deployment of the application is done with docker-compose on App Server.
 
 Technologies Used:
 - Cloud Provider               - **AWS**
-- IoC(Infrastructure as Code) - **Terraform**
+- IoC(Infrastructure as Code)  - **Terraform**
 - CICD Tool                    - **Jenkins**
 - Scripting                    - **Shell Scripting/Python**
 - Containerization             - **Docker**
@@ -32,7 +32,7 @@ Default output format [None]:
 
 To get this repository, run the following command inside your git enabled terminal
 ```bash
-$ git clone https://github.com/Yashtank-git/Devops-Project-1.git
+$ git clone https://github.com/Yashtank-git/django-docker-jenkins-terraform-aws
 ```
 Update the aws config directory file path to **terraform/01-AWS-DOCKER-JENKINS/variables.tf** variable file
 
@@ -70,7 +70,7 @@ The Application web server needs to be setup as Jenkins Agent to run the pipelin
 
 - Create a new job as "pipeline" type and name
 - Setup the Pipepine Definition as "Pipeline script with SCM" SCM as "Git"
-- Paste the Repository URL as "https://github.com/Yashtank-git/Devops-Project-1.git"
+- Paste the Repository URL as "https://github.com/Yashtank-git/django-docker-jenkins-terraform-aws"
 - Branch Specifier as "main" and Script Path as "Jenkinsfile"
 
 **The job is ready to build and run**
