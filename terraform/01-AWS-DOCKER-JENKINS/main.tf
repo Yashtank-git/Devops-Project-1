@@ -1,6 +1,7 @@
 resource "aws_instance" "todoapp-web" {
   subnet_id = aws_subnet.todoapp-subnet-public.id
-  depends_on = [ aws_default_security_group.todoapp-sg ]
+  depends_on = [ aws_default_security_group.todoapp-sg 
+  subnet_id= aws_default_security_group.todoapp-sg.id
   associate_public_ip_address = true
 
   ami           = "ami-053b0d53c279acc90" #Ubuntu 22.04
@@ -17,6 +18,7 @@ resource "aws_instance" "todoapp-web" {
 resource "aws_instance" "todoapp-jenkins" {
   subnet_id = aws_subnet.todoapp-subnet-public.id
   depends_on = [ aws_default_security_group.todoapp-sg ]
+  subnet_id= aws_default_security_group.todoapp-sg.id
   associate_public_ip_address = true
 
   ami = "ami-053b0d53c279acc90"
